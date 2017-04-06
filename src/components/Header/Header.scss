@@ -1,0 +1,49 @@
+.header {
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  background-color: rgb(41, 37, 224);
+  font-family: 'Lato';
+  font-size: 16px;
+  z-index: 1;
+}
+.headerContentWraper {
+  margin: 20px 20px 0 0;
+  display: block;
+  height:30px;
+}
+.headerIconleft1 {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  background-color: white;
+  // use pesudo element for vertical align effect, only works with small height like 20px;
+  //  &:before {
+    //  content: '\3000';
+  //  }
+}
+.titleText {
+  display: inline-block;
+  margin-bottom: 0px;
+  padding-left: 40px;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight:300;
+  color: white;
+}
+.subscribeText {
+  display: inline-block;
+  float: right;
+  padding-right: 70px;
+  line-height: 30px;
+  font-size: 15px;
+  font-weight:100;
+  color: white;
+   &:after {
+     content: "";
+     display: table;
+     clear: both;
+   }
+}

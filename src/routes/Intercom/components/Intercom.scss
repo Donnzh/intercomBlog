@@ -1,0 +1,178 @@
+.pageLayout {
+  min-height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 70px;
+  background-color: white;
+}
+
+.navBar {
+  position: absolute;
+  background-color: rgb(41, 37, 224);
+  left: 0;
+  right: 0;
+  font-family: 'Lato', serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.navCategoryWrapper {
+  margin: 5px 78px 0 0;
+  float: right;
+  ul {
+    list-style-type: none;
+    color: white;
+  }
+  li {
+    display: inline;
+    padding: 0 10px;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}
+
+.heroImageWraper {
+  padding-top: 35px;
+}
+
+.heroImage {
+  width: 100%;
+}
+
+.heroContainer {
+  padding: 0 45px 0 45px;
+}
+
+.heroContainerInner {
+  position: relative;
+  text-align: left;
+  background-color: white;
+  padding: 30px 50px 20px;
+  margin-top: -17%;
+  border-bottom: 1px solid darkblue;
+  overflow: auto;
+  h1 {
+    font-size: 50px;
+    font-family: serif;
+  }
+  div {
+    font-size: 18px;
+    font-weight: lighter;
+    font-family: serif;
+    color: rgb(117, 117, 117);
+  }
+}
+
+.autherImageWraper {
+  padding-top: 20px;
+}
+
+.autherImage {
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.autherName {
+  float: left;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+.contentContainer {
+  position: relative;
+  padding: 0px 45px;
+}
+
+.featured {
+  margin-top: 100px;
+  height: 400px;
+  border-bottom: 1px solid darkblue;
+}
+
+.featuredPost {
+  position: relative;
+  height: 400px;
+  width: 60%;
+  margin-right: 20px;
+  float: left;
+}
+
+.featuredPostimage {
+  width: 100%;
+}
+
+.featuredPostContentWraper {
+  position: absolute;
+  bottom: 0;
+}
+
+.featuredPostContent {
+  width: 95%;
+  padding: 20px;
+  text-align: left;
+  background-color: white;
+  overflow: auto;
+  margin: 0 auto;
+  border-bottom: 3px solid darkblue;
+}
+
+.normalPostContainer {
+  margin-top: 50px;
+}
+
+.buttomPlayer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  height: 30px;
+  width: 100%;
+  color: white;
+  background-color: darkblue;
+}
+
+.featuredSidebar {
+  min-width: 200px;
+  height: 100%;
+  width: 30%;
+  background-color: lightgreen;
+  float: right;
+}
+
+//*-------buttom player transition animation start---*//
+.bottomAudioPlayer-enter {
+  opacity: 0.01;
+  transition: opacity 0.7s ease-in;
+}
+
+.bottomAudioPlayer-enter.bottomAudioPlayer-enter-active {
+  opacity: 1;
+}
+
+.bottomAudioPlayer-leave {
+  opacity: 1;
+  transition: opacity 0.7s ease-in;
+}
+
+.bottomAudioPlayer-leave.bottomAudioPlayer-leave-active {
+  opacity: 0.01;
+}
+
+//*-------buttom player transition animation finish---*//
+
+@media screen and (max-width: 900px) {
+  .featuredSidebar {
+    display: none;
+  }
+
+  .featuredPost {
+    margin: 0 auto;
+    width: 90%;
+    float: none;
+  }
+}
