@@ -4,7 +4,6 @@ import React, {
 } from 'react'
 import './PostCard.css'
 import PlayArrow from 'react-icons/lib/md/play-arrow'
-import styles from './PostCard.css'
 
 export default class PostCard extends Component {
 
