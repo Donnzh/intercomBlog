@@ -2,7 +2,6 @@ import { connect } from 'react-redux'
 import {
   requestPostCardsData,
   toggleButtomPlayer,
-  toggleSearchForm,
   setSearchCategoryValue,
   setSearchLanguageValue,
   requestSearchNews
@@ -16,7 +15,6 @@ const mapDispatchToProps = {
   setSearchCategoryValue,
   setSearchLanguageValue,
   requestSearchNews
-  // toggleSearchForm,
 }
 
 const mapStateToProps = (state) => {
@@ -24,15 +22,11 @@ const mapStateToProps = (state) => {
     postCardsData,
     isShowButtonPlayer,
     searchCategoryValue
-    // isRenderSearchForm,
-    // searchLanguageValue
   } = state.intercom
   return {
     postCardsData,
     isShowButtonPlayer,
     searchCategoryValue
-    // isRenderSearchForm,
-    // searchLanguageValue
   }
 }
 

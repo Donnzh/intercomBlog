@@ -1,7 +1,6 @@
 import React, {
   Component
 } from 'react'
-import styles from './Intercom.scss'
 import {
   Col,
   Row
@@ -13,7 +12,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 const IntercomBgUrl = require('../assets/IntercomBg.jpg')
 const IntercomAutherUrl = require('../assets/authorImage.jpg')
 const featurePostImageUrl = require('../assets/featuredPost1.jpg')
-console.log('styles', styles.buttomPlayer)
 class BottomPlayer extends React.Component {
   static propTypes = {
     visible: React.PropTypes.bool
@@ -43,10 +41,6 @@ class Intercom extends Component {
     searchCategoryValue: React.PropTypes.string,
     requestSearchNews: React.PropTypes.func,
     toggleButtomPlayer: React.PropTypes.func
-    // isRenderSearchForm: React.PropTypes.bool,
-    // toggleSearchForm: React.PropTypes.func,
-    // searchLanguageValue: React.PropTypes.string,
-    // setSearchLanguageValue: React.PropTypes.func,
   };
 
   componentWillMount (props) {
@@ -77,11 +71,7 @@ class Intercom extends Component {
     return (
       <div className='pageLayout'>
         <SearchForm
-          // isRenderSearchForm={this.props.isRenderSearchForm}
           setSearchCategoryValue={this.props.setSearchCategoryValue}
-          // toggleSearchForm={this.props.toggleSearchForm}
-          // setSearchLanguageValue={this.props.setSearchLanguageValue}
-          // searchLanguageValue={this.props.searchLanguageValue}
           searchCategoryValue={this.props.searchCategoryValue}
           requestSearchNews={this.props.requestSearchNews}
         />
