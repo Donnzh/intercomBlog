@@ -43,7 +43,6 @@ export function requestSearchNews (searchParams) {
     let fetching = progressFetchNews(searchParams)
     fetching.then(result => {
       if (result) {
-        console.log(result.body.sources)
         const postCardsData = result.body.sources.map((p) => {
           return ({
             abstract: p.description,
@@ -61,17 +60,14 @@ export function requestSearchNews (searchParams) {
 
 function progressFetchNews (searchParams) {
   return new Promise((resolve, reject) => {
-    console.log('searchParams', searchParams)
     const apiUrl = `https://newsapi.org/v1/sources?category=${searchParams.category}`
     request.get(apiUrl).end((err, res) => {
       if (res) {
-        console.log(res)
         resolve(res)
         return
       }
       if (err) {
         reject(err)
-        console.log('error', err)
         return
       }
     })
@@ -104,7 +100,6 @@ function progressFetchPostCardsdata () {
       }
       if (err) {
         reject(err)
-        console.log('error', err)
         return
       }
     })

@@ -98,7 +98,6 @@ export default class SearchForm extends Component {
   }
 
   render () {
-    console.log('log from atom ')
     return (
       <div>
         <div
