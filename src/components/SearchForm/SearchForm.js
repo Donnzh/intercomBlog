@@ -15,10 +15,10 @@ export default class SearchForm extends Component {
     isRenderSearchForm2: PropTypes.bool,
     setSearchCategoryValue: PropTypes.func,
     searchCategoryValue: React.PropTypes.string,
-    requestSearchNews: React.PropTypes.func,
-  // setSearchLanguageValue: React.PropTypes.func
-  // searchLanguageValue: React.PropTypes.string,
-  // toggleSearchForm: PropTypes.func,
+    requestSearchNews: React.PropTypes.func
+    // setSearchLanguageValue: React.PropTypes.func
+    // searchLanguageValue: React.PropTypes.string,
+    // toggleSearchForm: PropTypes.func,
   };
 
   constructor (props) {
@@ -34,8 +34,7 @@ export default class SearchForm extends Component {
 
   handleSearch = () => {
     const searchParams = {
-      category: this.props.searchCategoryValue,
-      // language: this.props.searchLanguageValue
+      category: this.props.searchCategoryValue
     }
     this.props.requestSearchNews(searchParams)
     this.setState({
@@ -45,9 +44,6 @@ export default class SearchForm extends Component {
   handleCategoryChange = (e) => {
     this.props.setSearchCategoryValue(e.target.value)
   }
-  // handleLanguageChange = (e) => {
-  //   this.props.setSearchLanguageValue(e.target.value)
-  // }
 
   renderSearchForm (props) {
     if (this.state.isRenderSearchForm2) {
@@ -65,22 +61,6 @@ export default class SearchForm extends Component {
                   />
                 </Col>
               </FormGroup>
-              {/* <Row>
-               <div>OR</div>
-               </Row> */}
-              {/* <FormGroup controlId='formHorizontalPassword'>
-                <Col cozmponentClass={ControlLabel} smOffset={4} sm={1}>
-                 language
-                 </Col>
-                <Col smOffset={4} sm={4}>
-                  <FormControl
-                    className='searchInput'
-                    type='text'
-                    placeholder='en, de, fr ...'
-                    onChange={this.handleLanguageChange} />
-                </Col>
-              </FormGroup> */}
-
               <FormGroup>
                 <Col smOffset={4} sm={4} className='buttonWraper'>
                   <Button
