@@ -1,4 +1,4 @@
-A mocked intercom blog project using react redux starter kit
+An imitation of intercom blog web [WIP] using react redux starter kit
 
 
 ## Table of Contents
